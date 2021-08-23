@@ -8,6 +8,8 @@
     <title>Product Order</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="product.js"></script>
 </head>
 
 <body>
@@ -15,6 +17,8 @@
     <div class="container">
         <table class="table table-striped">
             <h3 style="text-align: center; margin-top: 50px;">Product List</h3>
+            <br>
+            <button type="button" class="btn btn-info"> + </button>
             <br>
             <thead>
                 <tr>
@@ -25,33 +29,20 @@
                     <th>Unit Price</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>123456</td>
-                    <td>Clock</td>
-                    <td>clk</td>
-                    <td>Active</td>
-                    <td>150</td>
-                </tr>
-                <tr>
-                    <td>321456</td>
-                    <td>Glass</td>
-                    <td>gls</td>
-                    <td>Active</td>
-                    <td>20</td>
-                </tr>
-            </tbody>
+            <tbody id="productTable"></tbody>
         </table>
 
-        Product Name: <input type="text" name="product name" id="product name"> 
-        Product Id: <input type="text" name="product id" id="product id">
-        Code: <input type="text" name="product code" id="product code">
-        Unit Price: <input type="text" name="product unitPrice" id="product unitPrice">
+        <input type="text" name="product name" id="product name" placeholder="Product Name">
+        <input type="text" name="product id" id="product id" placeholder="Product ID">
+        <input type="text" name="product code" id="product code" placeholder="Code">
+        <input type="text" name="product unitPrice" id="product unitPrice" placeholder="Unit Price">
         Active: <select name="product active" id="product active">
-                <option value="bos"> Select...</option>
-                <option value="active"> Active </option>
-                <option value="inactive"> Inactive</option>
+            <option value="bos"> Select...</option>
+            <option value="active"> Active </option>
+            <option value="inactive"> Inactive</option>
+
         </select>
+        
 
         <form action="">
             <br>
