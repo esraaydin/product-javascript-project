@@ -8,8 +8,8 @@
     <title>Product Order</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="product.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <table class="table table-striped">
             <h3 style="text-align: center; margin-top: 50px;">Product List</h3>
             <br>
-            <button type="button" class="btn btn-info"> + </button>
+            <button type="button" class="btn btn-info" onclick="emptyForm()"> + </button>
             <br>
             <thead>
                 <tr>
@@ -31,26 +31,25 @@
             </thead>
             <tbody id="productTable"></tbody>
         </table>
-
-        <input type="text" name="product name" id="product name" placeholder="Product Name">
-        <input type="text" name="product id" id="product id" placeholder="Product ID">
-        <input type="text" name="product code" id="product code" placeholder="Code">
-        <input type="text" name="product unitPrice" id="product unitPrice" placeholder="Unit Price">
-        Active: <select name="product active" id="product active">
-            <option value="bos"> Select...</option>
-            <option value="active"> Active </option>
-            <option value="inactive"> Inactive</option>
-
-        </select>
-        
-
         <form action="">
-            <br>
-            <button type="button" class="btn btn-danger">DELETE</button>
-            <button type="button" class="btn btn-warning">SAVE</button>
-            <button type="button" class="btn btn-success">EDIT</button>
+            <input type="text" id="productId" placeholder="Product ID" disabled>
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="productCode" placeholder="Code">
+            <input type="text" id="productUnitPrice" placeholder="Unit Price">
+            Active: <select id="productActive">
+                <option value=""> Select...</option>
+                <option value=true> True </option>
+                <option value=false> False</option>
+
+            </select>
+
+            <br><br>
+            <button type="button" class="btn btn-warning" onclick="addList()">SAVE</button>
         </form>
+
     </div>
+    <br>
+    <script type="text/javascript" src="product.js"></script>
 </body>
 
 </html>
