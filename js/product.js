@@ -52,7 +52,7 @@ function updateList() {
         name: $("#productName").val(),
         code: $("#productCode").val(),
         unitPrice: $("#productUnitPrice").val(),
-        active: $("#productActive").is(':checked'),
+        active: $("#productActive").val(':checked'),
     }
 
     $.ajax({
