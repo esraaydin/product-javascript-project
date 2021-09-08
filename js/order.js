@@ -58,7 +58,7 @@ function updateList() {
         delivertDate: $("#orderDeliveryDate").val(),
         orderDate: $("#orderOrderDate").val(),
         product: $("#orderProduct").val(),
-        active: $("#orderActive").val(':checked'),
+        
     }
 
     $.ajax({
@@ -107,7 +107,6 @@ function onRowClick(index) {
     $("#orderDeliveryDate").val(orderList[index].delivertDate)
     $("#orderOrderDate").val(orderList[index].orderDate)
     $("#orderProduct").val(orderList[index].product)
-    $("#orderActive").prop('checked', orderList[index].active)
 }
 
 function emptyForm() {
@@ -118,5 +117,4 @@ function emptyForm() {
     $("#orderDeliveryDate").val("");
     $("#orderOrderDate").val("");
     $("#orderProduct").val("");
-    $("#orderActive").val("");
 }
