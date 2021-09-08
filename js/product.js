@@ -39,6 +39,7 @@ function addList() {
         contentType: "application/json; charset=utf-8",
         success: function (result) {
             getList();
+            // $('#gpgu0').is(':checked')
         },
         error: function (err) {
             alert('err');

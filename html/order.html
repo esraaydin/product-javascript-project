@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <table class="table table-striped">
+            <h3 style="text-align: center; margin-top: 50px;"> Order List</h3>
+            <br>
+            <button type="button" class="btn btn-info" onclick="emptyForm()"> + </button>
+            <br>
+            <thead>
+                <tr>
+                    <th>productOrderId</th>
+                    <th>code</th>
+                    <th>active</th>
+                    <th>amount</th>
+                    <th>totalPrice</th>
+                    <th>deliveryDate</th>
+                    <th>orderDate</th>
+                    <th>product</th>
+                </tr>
+            </thead>
+            <tbody id="orderTable"></tbody>
+        </table>
+        <form action=" ">
+            <input type="text" id="productOrderId" placeholder="Order Id" disabled>
+            <input type="text" id="code" placeholder="Code">
+            <input type="text" id="amount" placeholder="Amount">
+            <input type="text" id="totalPrice" placeholder="Total Price">
+            <input type="text" id="deliveryDate" placeholder="Delivery Date">
+            <input type="text" id="orderDate" placeholder="Order Date">
+            <input type="text" id="product" placeholder="Product">
+            Active: <select id="productActive">
+                <option value=""> Select...</option>
+                <option value=true> True </option>
+                <option value=false> False</option>
+            </select>
+            <br><br>
+            <button type="button" class="btn btn-warning" onclick="addList()"> SAVE </button>
+        </form>
+    </div>
+    <br>
+    <script type="text/javascript" src="/js/order.js"></script>
+    
+</body>
