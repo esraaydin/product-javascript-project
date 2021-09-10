@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <table class="table table-striped">
             <h3 style="text-align: center; margin-top: 50px;"> Order List</h3>
@@ -24,7 +23,6 @@
                 <tr>
                     <th>productOrderId</th>
                     <th>code</th>
-                    <th>active</th>
                     <th>amount</th>
                     <th>totalPrice</th>
                     <th>deliveryDate</th>
@@ -41,11 +39,7 @@
             <input type="text" id="totalPrice" placeholder="Total Price">
             <input type="text" id="deliveryDate" placeholder="Delivery Date">
             <input type="text" id="orderDate" placeholder="Order Date">
-            <input type="text" id="product" placeholder="Product">
-            Active: <select id="productActive">
-                <option value=""> Select...</option>
-                <option value=true> True </option>
-                <option value=false> False</option>
+            Product: <select id="productId">
             </select>
             <br><br>
             <button type="button" class="btn btn-warning" onclick="addList()"> SAVE </button>
@@ -53,5 +47,4 @@
     </div>
     <br>
     <script type="text/javascript" src="/js/order.js"></script>
-    
 </body>
